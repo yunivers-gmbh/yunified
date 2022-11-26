@@ -1,0 +1,129 @@
+:root {
+  --black: $black;
+  --white: $white;
+  --yunivers-pink: $yunivers-pink;
+  --danger-red: $danger-red;
+}
+
+body {
+  padding: 0 calc((100% - 800px) / 2);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+input[type="text"], input[type="password"] {
+  border: solid 1px #1D1D1D;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #1D1D1D;
+  padding: 12px 12px;
+  background-color: transparent;
+  -webkit-transition: border-color .1s ease;
+  transition: border-color .1s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+  border-color: #F223B5;
+}
+
+select {
+  height: 100%;
+  min-height: 42px;
+  border: solid 1px var(--black);
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: var(--black);
+  background-color: transparent;
+  -webkit-transition: border-color .1s ease;
+  transition: border-color .1s ease;
+}
+
+select option {
+  font-family: 'Roboto Mono';
+}
+
+select:focus {
+  outline: none;
+  border-color: #F223B5;
+}
+
+button, input[type="submit"] {
+  background-color: #1D1D1D;
+  border: solid 1px #1D1D1D;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: white;
+  padding: 12px 35px;
+  cursor: pointer;
+  -webkit-transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
+  border-radius: 0;
+  -webkit-transition: border-color .1s ease;
+  transition: border-color .1s ease;
+}
+
+button:focus, input[type="submit"]:focus {
+  outline: none;
+  border-color: #F223B5;
+}
+
+button:hover, input[type="submit"]:hover {
+  color: #1D1D1D;
+  background-color: transparent;
+}
+
+button.alt, input[type="submit"].alt {
+  background-color: #F1F1F1;
+  border-color: #F1F1F1;
+  color: #1D1D1D;
+}
+
+button.alt:hover, input[type="submit"].alt:hover {
+  color: #1D1D1D;
+  background-color: transparent;
+}
+
+button.danger, input[type="submit"].danger {
+  color: #D50B26;
+}
+
+button.danger:hover, input[type="submit"].danger:hover {
+  background-color: #D50B26;
+  border-color: #D50B26;
+  color: white;
+}
+
+label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #1D1D1D;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+  color: #1D1D1D;
+}
+
+a {
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: #F223B5 !important;
+}
+/*# sourceMappingURL=theme.css.map */

@@ -1,0 +1,117 @@
+$black: #1D1D1D;
+$white: white;
+$yunivers-pink: #F223B5;
+$danger-red: #D50B26;
+
+@mixin yunv-outline {
+    transition: border-color .1s ease;
+    &:focus {
+        outline: none;
+        border-color: $yunivers-pink;
+    }
+}
+
+
+:root {
+    --black: $black;
+    --white: $white;
+    --yunivers-pink: $yunivers-pink;
+    --danger-red: $danger-red;
+}
+
+body {
+    padding: 0 calc((100% - 800px) / 2);
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+input[type="text"], input[type="password"] {
+    border: solid 1px $black;
+    border-radius: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: $black;
+    padding: 12px 12px;
+    background-color: transparent;
+    @include yunv-outline;
+}
+
+select {
+    height: 100%;
+    min-height: 42px;
+    border: solid 1px var(--black);
+    border-radius: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: var(--black);
+    background-color: transparent;
+    option {
+        font-family: 'Roboto Mono';
+    }
+    @include yunv-outline;
+}
+
+button, input[type="submit"]{
+    background-color: $black;
+    border: solid 1px $black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: $white;
+    padding: 12px 35px;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease;
+    border-radius: 0;
+    @include yunv-outline;
+    &:hover {
+        color: $black;
+        background-color: transparent;
+    }
+    &.alt {
+        background-color: #F1F1F1;
+        border-color: #F1F1F1;
+        color: $black;
+        &:hover {
+            color: $black;
+            background-color: transparent;
+        }
+    }
+    &.danger {
+        color: $danger-red;
+        &:hover {
+            background-color: $danger-red;
+            border-color: $danger-red;
+            color: $white;
+        }
+    }
+}
+
+label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: $black;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    color: $black;
+}
+
+a {
+    transition: color .2s ease;
+    &:hover {
+        color: $yunivers-pink !important;
+    }
+}
