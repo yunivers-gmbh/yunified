@@ -1,0 +1,11 @@
+<%- include('includes/header', {styles: ['login'], title: "Login"}); %>
+<body <%= locals.error ? 'class=login-error' : '' %>>
+    <form id="login-form" action="/login" method="post">
+        <input type="hidden" name="redirect" value="<%= redirect %>">
+        <h1>Login.</h1>
+        <label for="password">Passwort</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Anmelden.">
+    </form>
+</body>
+<%- include('includes/footer') %>

@@ -1,0 +1,112 @@
+#login-form {
+  width: 50%;
+  height: 100%;
+  margin: 0 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#login-form h1 {
+  margin-bottom: 80px;
+}
+
+#login-form label {
+  margin-bottom: 5px;
+}
+
+#login-form input[type="submit"] {
+  display: block;
+  margin-top: 55px;
+}
+
+body.login-error {
+  -webkit-animation-name: error-red;
+          animation-name: error-red;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+body.login-error #login-form {
+  -webkit-animation-name: error-wiggle;
+          animation-name: error-wiggle;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes error-wiggle {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  75% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes error-wiggle {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  75% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes error-red {
+  0% {
+    background-color: transparent;
+  }
+  10% {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes error-red {
+  0% {
+    background-color: transparent;
+  }
+  10% {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #login-form {
+    width: 90%;
+    margin: 0 5%;
+  }
+  #login-form input {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=login.css.map */

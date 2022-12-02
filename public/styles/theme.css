@@ -1,8 +1,15 @@
 :root {
-  --black: $black;
-  --white: $white;
-  --yunivers-pink: $yunivers-pink;
-  --danger-red: $danger-red;
+  --black: #1D1D1D;
+  --white: white;
+  --yunivers-pink: #F223B5;
+  --yunivers-light-pink: #fcd3f0;
+  --danger-red: #D50B26;
+  --grey: #DDDDDD;
+}
+
+* {
+  font-family: 'Roboto Mono';
+  font-style: normal;
 }
 
 body {
@@ -11,7 +18,7 @@ body {
   margin: 0 auto;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="date"] {
   border: solid 1px #1D1D1D;
   border-radius: 0;
   font-weight: 400;
@@ -25,7 +32,7 @@ input[type="text"], input[type="password"] {
   transition: border-color .1s ease;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus {
   outline: none;
   border-color: #F223B5;
 }
@@ -102,12 +109,56 @@ button.danger:hover, input[type="submit"].danger:hover {
   color: white;
 }
 
+button:disabled, input[type="submit"]:disabled {
+  background-color: #888888;
+  color: white;
+}
+
 label {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.4px;
   color: #1D1D1D;
+}
+
+.input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.input-wrapper label {
+  margin-bottom: 5px;
+}
+
+.input-wrapper.full-width {
+  width: 100%;
+}
+
+.input-wrapper.single-item {
+  margin-right: 52%;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form .hover-right {
+  margin-left: auto;
 }
 
 h1 {
@@ -125,5 +176,23 @@ a {
 
 a:hover {
   color: #F223B5 !important;
+}
+
+.breadcrumbs a, .breadcrumbs span {
+  color: #1D1D1D;
+  text-decoration: none;
+}
+
+.breadcrumbs a:last-child, .breadcrumbs span:last-child {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:last-child::after, .breadcrumbs span:last-child::after {
+  content: unset;
+}
+
+.breadcrumbs a::after, .breadcrumbs span::after {
+  content: " \203A";
+  font-size: 18px;
 }
 /*# sourceMappingURL=theme.css.map */
