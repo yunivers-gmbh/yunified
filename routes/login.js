@@ -14,7 +14,6 @@ router.get("/", (req, res) => {
       res.render("login", {
         error: false,
         redirect: req.query.red,
-        domain: process.env.COOKIE_DOMAIN,
       });
     });
 });
@@ -28,7 +27,11 @@ router.post("/", (req, res) => {
         `INSERT INTO tokens (token, validUntil) VALUES("${token}", "${timeout}")`
       );
     });
-    res.cookie("token", token, { maxAge: 9000000, httpOnly: true });
+    res.cookie("token", token, {
+      maxAge: 9000000,
+      httpOnly: true,
+      domain: process.env.COOKIE_DOMAIN,
+    });
     console.log(req.body.redirect);
     res.redirect(req.body.redirect ? req.body.redirect : "/");
   } else {
