@@ -129,6 +129,13 @@ label {
     &.single-item {
         margin-right: 52%;
     }
+    &.multiple-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        button {
+            width: 48%;
+        }
+    }
 }
 
 .form {
