@@ -18,7 +18,7 @@ $grey: #dddddd;
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(/fonts/RobotoMono-Light.ttf);
+    src: url(/fonts/RobotoMono-Light.ttf) format('truetype');
 }
 
 @font-face {
@@ -26,7 +26,7 @@ $grey: #dddddd;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/fonts/RobotoMono-Regular.ttf);
+    src: url(/fonts/RobotoMono-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -34,7 +34,7 @@ $grey: #dddddd;
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/fonts/RobotoMono-Bold.ttf);
+    src: url(/fonts/RobotoMono-Bold.ttf) format('truetype');
 }
 
 :root {
