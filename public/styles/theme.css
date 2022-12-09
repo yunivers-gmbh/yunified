@@ -4,14 +4,14 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(/fonts/RobotoMono-Light.ttf), url(/public/fonts/RobotoMono-Light.ttf);
+  src: url(/fonts/RobotoMono-Light.ttf);
 }
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/RobotoMono-Regular.ttf), url(/public/fonts/RobotoMono-Regular.ttf);
+  src: url(/fonts/RobotoMono-Regular.ttf);
 }
 @font-face {
   font-family: "Roboto Mono";
