@@ -1,24 +1,45 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", "Roboto Mono GitHub";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(fonts/RobotoMono-Light.ttf) format("truetype");
+  src: url(/fonts/RobotoMono-Light.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", "Roboto Mono GitHub";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(fonts/RobotoMono-Regular.ttf) format("truetype");
+  src: url(/fonts/RobotoMono-Regular.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", "Roboto Mono GitHub";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(fonts/RobotoMono-Bold.ttf) format("truetype");
+  src: url(/fonts/RobotoMono-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono GitHub";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/RobotoMono-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono GitHub";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/RobotoMono-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono GitHub";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/RobotoMono-Bold.ttf) format("truetype");
 }
 :root {
   --black: #1d1d1d;
