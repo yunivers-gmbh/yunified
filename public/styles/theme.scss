@@ -4,6 +4,7 @@ $yunivers-pink: #f223b5;
 $yuniver-light-pink: #fcd3f0;
 $danger-red: #d50b26;
 $grey: #dddddd;
+$font-list: 'Roboto Mono', 'Roboto Mono GitHub';
 
 @mixin yunv-outline {
     transition: border-color 0.1s ease;
@@ -14,7 +15,7 @@ $grey: #dddddd;
 }
 
 @font-face {
-    font-family: 'Roboto Mono', 'Roboto Mono GitHub';
+    font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -22,7 +23,7 @@ $grey: #dddddd;
 }
 
 @font-face {
-    font-family: 'Roboto Mono', 'Roboto Mono GitHub';
+    font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -30,7 +31,7 @@ $grey: #dddddd;
 }
 
 @font-face {
-    font-family: 'Roboto Mono', 'Roboto Mono GitHub';
+    font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -68,10 +69,11 @@ $grey: #dddddd;
     --yunivers-light-pink: #{$yuniver-light-pink};
     --danger-red: #{$danger-red};
     --grey: #{$grey};
+    --font-list: #{$font-list};
 }
 
 * {
-    font-family: "Roboto Mono";
+    font-family: var(--font-list);
     font-style: normal;
 }
 
@@ -109,7 +111,7 @@ select {
     color: var(--black);
     background-color: transparent;
     option {
-        font-family: "Roboto Mono";
+        font-family: var(--font-list);
     }
     @include yunv-outline;
 }

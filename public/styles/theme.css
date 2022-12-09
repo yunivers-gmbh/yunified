@@ -1,20 +1,20 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Roboto Mono", "Roboto Mono GitHub";
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: url(/fonts/RobotoMono-Light.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto Mono", "Roboto Mono GitHub";
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(/fonts/RobotoMono-Regular.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto Mono", "Roboto Mono GitHub";
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -48,10 +48,11 @@
   --yunivers-light-pink: #fcd3f0;
   --danger-red: #d50b26;
   --grey: #dddddd;
+  --font-list: Roboto Mono, Roboto Mono GitHub;
 }
 
 * {
-  font-family: "Roboto Mono";
+  font-family: var(--font-list);
   font-style: normal;
 }
 
@@ -98,7 +99,7 @@ select {
   transition: border-color 0.1s ease;
 }
 select option {
-  font-family: "Roboto Mono";
+  font-family: var(--font-list);
 }
 select:focus {
   outline: none;
