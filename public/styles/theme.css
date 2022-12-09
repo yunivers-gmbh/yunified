@@ -144,6 +144,8 @@ input[type=submit].alt:hover {
 }
 button.danger,
 input[type=submit].danger {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
   color: #d50b26;
 }
 button.danger:hover,
@@ -154,6 +156,14 @@ input[type=submit].danger:hover {
 }
 button:disabled,
 input[type=submit]:disabled {
+  cursor: not-allowed;
+  border-color: #888888;
+  background-color: #888888;
+  color: white;
+}
+button:disabled:hover,
+input[type=submit]:disabled:hover {
+  border-color: #888888;
   background-color: #888888;
   color: white;
 }

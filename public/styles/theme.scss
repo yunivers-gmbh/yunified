@@ -144,6 +144,8 @@ input[type="submit"] {
         }
     }
     &.danger {
+        background-color: #f1f1f1;
+        border-color: #f1f1f1;
         color: $danger-red;
         &:hover {
             background-color: $danger-red;
@@ -152,8 +154,15 @@ input[type="submit"] {
         }
     }
     &:disabled {
+        cursor: not-allowed;
+        border-color: #888888;
         background-color: #888888;
         color: $white;
+        &:hover {
+            border-color: #888888;
+            background-color: #888888;
+            color: $white;
+        }
     }
 }
 
