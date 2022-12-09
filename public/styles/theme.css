@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/RobotoMono-Bold.ttf), url(/public/fonts/RobotoMono-Bold.ttf);
+  src: url(/fonts/RobotoMono-Bold.ttf);
 }
 :root {
   --black: #1d1d1d;
