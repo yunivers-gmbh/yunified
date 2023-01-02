@@ -1,14 +1,58 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/RobotoMono-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/RobotoMono-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/RobotoMono-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono GitHub";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/RobotoMono-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono GitHub";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/RobotoMono-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto Mono GitHub";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/RobotoMono-Bold.ttf) format("truetype");
+}
 :root {
-  --black: #1D1D1D;
+  --black: #1d1d1d;
   --white: white;
-  --yunivers-pink: #F223B5;
+  --yunivers-pink: #f223b5;
   --yunivers-light-pink: #fcd3f0;
-  --danger-red: #D50B26;
-  --grey: #DDDDDD;
+  --danger-red: #d50b26;
+  --grey: #dddddd;
+  --font-list: Roboto Mono, Roboto Mono GitHub;
 }
 
 * {
-  font-family: 'Roboto Mono';
+  font-family: var(--font-list);
   font-style: normal;
 }
 
@@ -18,23 +62,27 @@ body {
   margin: 0 auto;
 }
 
-input[type="text"], input[type="password"], input[type="date"] {
-  border: solid 1px #1D1D1D;
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=email] {
+  border: solid 1px #1d1d1d;
   border-radius: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.4px;
-  color: #1D1D1D;
+  color: #1d1d1d;
   padding: 12px 12px;
   background-color: transparent;
-  -webkit-transition: border-color .1s ease;
-  transition: border-color .1s ease;
+  transition: border-color 0.1s ease;
 }
-
-input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus {
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=email]:focus {
   outline: none;
-  border-color: #F223B5;
+  border-color: #f223b5;
 }
 
 select {
@@ -48,22 +96,20 @@ select {
   letter-spacing: 0.4px;
   color: var(--black);
   background-color: transparent;
-  -webkit-transition: border-color .1s ease;
-  transition: border-color .1s ease;
+  transition: border-color 0.1s ease;
 }
-
 select option {
-  font-family: 'Roboto Mono';
+  font-family: var(--font-list);
 }
-
 select:focus {
   outline: none;
-  border-color: #F223B5;
+  border-color: #f223b5;
 }
 
-button, input[type="submit"] {
-  background-color: #1D1D1D;
-  border: solid 1px #1D1D1D;
+button,
+input[type=submit] {
+  background-color: #1d1d1d;
+  border: solid 1px #1d1d1d;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -71,45 +117,53 @@ button, input[type="submit"] {
   color: white;
   padding: 12px 35px;
   cursor: pointer;
-  -webkit-transition: background-color .2s ease, color .2s ease;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   border-radius: 0;
-  -webkit-transition: border-color .1s ease;
-  transition: border-color .1s ease;
+  transition: border-color 0.1s ease;
 }
-
-button:focus, input[type="submit"]:focus {
+button:focus,
+input[type=submit]:focus {
   outline: none;
-  border-color: #F223B5;
+  border-color: #f223b5;
 }
-
-button:hover, input[type="submit"]:hover {
-  color: #1D1D1D;
+button:hover,
+input[type=submit]:hover {
+  color: #1d1d1d;
   background-color: transparent;
 }
-
-button.alt, input[type="submit"].alt {
-  background-color: #F1F1F1;
-  border-color: #F1F1F1;
-  color: #1D1D1D;
+button.alt,
+input[type=submit].alt {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: #1d1d1d;
 }
-
-button.alt:hover, input[type="submit"].alt:hover {
-  color: #1D1D1D;
+button.alt:hover,
+input[type=submit].alt:hover {
+  color: #1d1d1d;
   background-color: transparent;
 }
-
-button.danger, input[type="submit"].danger {
-  color: #D50B26;
+button.danger,
+input[type=submit].danger {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: #d50b26;
 }
-
-button.danger:hover, input[type="submit"].danger:hover {
-  background-color: #D50B26;
-  border-color: #D50B26;
+button.danger:hover,
+input[type=submit].danger:hover {
+  background-color: #d50b26;
+  border-color: #d50b26;
   color: white;
 }
-
-button:disabled, input[type="submit"]:disabled {
+button:disabled,
+input[type=submit]:disabled {
+  cursor: not-allowed;
+  border-color: #888888;
+  background-color: #888888;
+  color: white;
+}
+button:disabled:hover,
+input[type=submit]:disabled:hover {
+  border-color: #888888;
   background-color: #888888;
   color: white;
 }
@@ -119,58 +173,37 @@ label {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.4px;
-  color: #1D1D1D;
+  color: #1d1d1d;
 }
 
 .input-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 48%;
   margin-bottom: 20px;
 }
-
 .input-wrapper label {
   margin-bottom: 5px;
 }
-
 .input-wrapper.full-width {
   width: 100%;
 }
-
 .input-wrapper.single-item {
   margin-right: 52%;
 }
-
 .input-wrapper.multiple-buttons {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 .input-wrapper.multiple-buttons button {
   width: 48%;
 }
 
 .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 .form .hover-right {
   margin-left: auto;
 }
@@ -180,33 +213,28 @@ h1 {
   font-weight: 400;
   font-size: 36px;
   line-height: 47px;
-  color: #1D1D1D;
+  color: #1d1d1d;
 }
 
 a {
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
-
 a:hover {
-  color: #F223B5 !important;
+  color: #f223b5 !important;
 }
 
 .breadcrumbs a, .breadcrumbs span {
-  color: #1D1D1D;
+  color: #1d1d1d;
   text-decoration: none;
 }
-
 .breadcrumbs a:last-child, .breadcrumbs span:last-child {
   opacity: 0.6;
 }
-
 .breadcrumbs a:last-child::after, .breadcrumbs span:last-child::after {
   content: unset;
 }
-
 .breadcrumbs a::after, .breadcrumbs span::after {
-  content: " \203A";
+  content: " ›";
   font-size: 18px;
 }
 

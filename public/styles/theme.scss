@@ -1,19 +1,66 @@
-$black: #1D1D1D;
+$black: #1d1d1d;
 $white: white;
-$yunivers-pink: #F223B5;
+$yunivers-pink: #f223b5;
 $yuniver-light-pink: #fcd3f0;
-$danger-red: #D50B26;
-$grey: #DDDDDD;
-
+$danger-red: #d50b26;
+$grey: #dddddd;
+$font-list: 'Roboto Mono', 'Roboto Mono GitHub';
 
 @mixin yunv-outline {
-    transition: border-color .1s ease;
+    transition: border-color 0.1s ease;
     &:focus {
         outline: none;
         border-color: $yunivers-pink;
     }
 }
 
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/RobotoMono-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/RobotoMono-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/RobotoMono-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono GitHub';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/RobotoMono-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono GitHub';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/RobotoMono-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono GitHub';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/RobotoMono-Bold.ttf) format('truetype');
+}
 
 :root {
     --black: #{$black};
@@ -22,10 +69,11 @@ $grey: #DDDDDD;
     --yunivers-light-pink: #{$yuniver-light-pink};
     --danger-red: #{$danger-red};
     --grey: #{$grey};
+    --font-list: #{$font-list};
 }
 
 * {
-    font-family: 'Roboto Mono';
+    font-family: var(--font-list);
     font-style: normal;
 }
 
@@ -35,11 +83,12 @@ body {
     margin: 0 auto;
 }
 
-
-input[type="text"], input[type="password"], input[type="date"] {
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"] {
     border: solid 1px $black;
     border-radius: 0;
-
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -62,12 +111,13 @@ select {
     color: var(--black);
     background-color: transparent;
     option {
-        font-family: 'Roboto Mono';
+        font-family: var(--font-list);
     }
     @include yunv-outline;
 }
 
-button, input[type="submit"]{
+button,
+input[type="submit"] {
     background-color: $black;
     border: solid 1px $black;
     font-weight: 400;
@@ -77,7 +127,7 @@ button, input[type="submit"]{
     color: $white;
     padding: 12px 35px;
     cursor: pointer;
-    transition: background-color .2s ease, color .2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
     border-radius: 0;
     @include yunv-outline;
     &:hover {
@@ -85,8 +135,8 @@ button, input[type="submit"]{
         background-color: transparent;
     }
     &.alt {
-        background-color: #F1F1F1;
-        border-color: #F1F1F1;
+        background-color: #f1f1f1;
+        border-color: #f1f1f1;
         color: $black;
         &:hover {
             color: $black;
@@ -94,6 +144,8 @@ button, input[type="submit"]{
         }
     }
     &.danger {
+        background-color: #f1f1f1;
+        border-color: #f1f1f1;
         color: $danger-red;
         &:hover {
             background-color: $danger-red;
@@ -102,8 +154,15 @@ button, input[type="submit"]{
         }
     }
     &:disabled {
+        cursor: not-allowed;
+        border-color: #888888;
         background-color: #888888;
         color: $white;
+        &:hover {
+            border-color: #888888;
+            background-color: #888888;
+            color: $white;
+        }
     }
 }
 
@@ -156,7 +215,7 @@ h1 {
 }
 
 a {
-    transition: color .2s ease;
+    transition: color 0.2s ease;
     &:hover {
         color: $yunivers-pink !important;
     }
