@@ -1,8 +1,9 @@
 import * as dotenv from "dotenv";
 dotenv.default.config();
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import favicon from "serve-favicon";
 
@@ -19,6 +20,21 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(
+	cors({
+		origin: (origin, cb) => {
+			if (!origin) {
+				cb(null, false);
+				return;
+			}
+			const validOrigin =
+				origin === "https://yunivers-ug.github.io" ||
+				origin.startsWith("http://localhost:") ||
+				/\.yunivers\.de$/.test(origin);
+			cb(null, validOrigin);
+		},
+	}),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
