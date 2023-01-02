@@ -209,4 +209,20 @@ a:hover {
   content: " \203A";
   font-size: 18px;
 }
+
+#toast-container {
+  position: fixed;
+  top: 5px;
+  right: calc((100% - 800px) / 2);
+}
+
+#toast-container .toast-info {
+  background-color: var(--white);
+  border: solid 1px var(--yunivers-pink);
+  color: var(--black);
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
 /*# sourceMappingURL=theme.css.map */

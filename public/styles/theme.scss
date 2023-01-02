@@ -178,3 +178,19 @@ a {
         }
     }
 }
+
+//toastr style
+#toast-container {
+    position: fixed;
+    top: 5px;
+    right: calc((100% - 800px) / 2);
+    .toast-info {
+        background-color: var(--white);
+        border: solid 1px var(--yunivers-pink);
+        color: var(--black);
+        padding: 5px 15px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+}
