@@ -4,6 +4,7 @@ $yunivers-pink: #f223b5;
 $yuniver-light-pink: #fcd3f0;
 $danger-red: #d50b26;
 $grey: #dddddd;
+$light-grey: #F1F1F1;
 $font-list: 'Roboto Mono', 'Roboto Mono GitHub';
 
 @mixin yunv-outline {
@@ -69,6 +70,7 @@ $font-list: 'Roboto Mono', 'Roboto Mono GitHub';
     --yunivers-light-pink: #{$yuniver-light-pink};
     --danger-red: #{$danger-red};
     --grey: #{$grey};
+    --light-grey: #{$light-grey};
     --font-list: #{$font-list};
 }
 
