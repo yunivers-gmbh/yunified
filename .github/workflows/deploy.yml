@@ -1,0 +1,17 @@
+name: Remote SSH
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.MAIN_PI_IP }}
+        username: ${{ secrets.MAIN_PI_USER }}
+        password: ${{ secrets.MAIN_PI_PRIVATE_KEY }}
+        port: ${{ secrets.MAIN_PI_PORT }}
+        script: |
+          bash /home/ubuntu/yunified/update.sh
