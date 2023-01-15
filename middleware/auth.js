@@ -6,7 +6,6 @@ const authenticate = function (req, res, next) {
       next();
     })
     .catch(() => {
-      console.log(req, req.originalUrl);
       res.redirect(`/login?red=${req.originalUrl}`);
     });
 };

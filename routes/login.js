@@ -21,14 +21,15 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   if (req.body.password === process.env.PASSWORD) {
     let token = uuidv4();
-    let timeout = Date.now() + 1000 * 60 * 60 * 24 * 5;
+    let cookieDuration = 1000 * 60 * 60 * 24 * 5;
+    let timeout = Date.now() + cookieDuration;
     db.serialize(() => {
       db.run(
         `INSERT INTO tokens (token, validUntil) VALUES("${token}", "${timeout}")`
       );
     });
     res.cookie("token", token, {
-      maxAge: 9000000,
+      maxAge: cookieDuration,
       httpOnly: true,
       domain: process.env.COOKIE_DOMAIN,
     });
