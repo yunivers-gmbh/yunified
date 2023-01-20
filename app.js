@@ -21,27 +21,30 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(
-	cors({
-		origin: (origin, cb) => {
-			if (!origin) {
-				cb(null, false);
-				return;
-			}
-			const validOrigin =
-				origin === "https://yunivers-ug.github.io" ||
-				origin.startsWith("http://localhost:") ||
-				/\.yunivers\.de$/.test(origin);
-			cb(null, validOrigin);
-		},
-	}),
+  cors({
+    origin: (origin, cb) => {
+      if (!origin) {
+        cb(null, false);
+        return;
+      }
+      const url = new URL(origin);
+      const validOrigin =
+        url.hostname === "localhost" ||
+        url.hostname === "yunivers-ug.github.io" ||
+        url.hostname.endsWith(".yunivers.de");
+      cb(null, validOrigin);
+    },
+  })
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(favicon(path.join(__dirname, "/public/favicon.ico")));
-app.use(express.static("public", {
-  index: false,
-}));
+app.use(
+  express.static("public", {
+    index: false,
+  })
+);
 
 app.use("/login", loginRouter);
 
