@@ -64,6 +64,7 @@ body {
 }
 
 input[type=text],
+input[type=number],
 input[type=password],
 input[type=date],
 input[type=email] {
@@ -79,6 +80,7 @@ input[type=email] {
   transition: border-color 0.1s ease;
 }
 input[type=text]:focus,
+input[type=number]:focus,
 input[type=password]:focus,
 input[type=date]:focus,
 input[type=email]:focus {
