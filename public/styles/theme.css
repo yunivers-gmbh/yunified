@@ -254,4 +254,13 @@ a:hover {
   font-size: 12px;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+#toast-container .toast-error {
+  background-color: var(--white);
+  border: solid 1px var(--danger-red);
+  color: var(--black);
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=theme.css.map */
